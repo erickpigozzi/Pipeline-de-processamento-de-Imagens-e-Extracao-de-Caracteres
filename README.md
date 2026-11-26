@@ -1,87 +1,154 @@
-# Comparação de OCR em Placas Veiculares (Tesseract x EasyOCR)
+# Segmentação de placas veiculares e comparação de OCR (Tesseract x EasyOCR)
 
-Projeto da disciplina de Processamento de Imagens. O pipeline segmenta e extrai placas
-Mercosul de 20 imagens e aplica **dois OCRs diferentes sobre exatamente o mesmo
-processamento**, para comparar o desempenho das ferramentas.
+Trabalho de Processamento de Imagens. Pipeline em Python/OpenCV que detecta e extrai placas
+Mercosul de 20 imagens e roda **Tesseract** e **EasyOCR** sobre o mesmo processamento, para
+comparar o desempenho dos dois OCRs.
+
+> As pastas `resultados/` e `placas_segmentadas/` contêm a saída da última execução e são
+> regeneradas pelo código (ver "Como executar").
 
 ## Pipeline
 
 ```
-imagem -> 1. segmentação da placa -> 2. extração/retificação -> 3. ROI dos caracteres
-       -> 4. pré-processamento (7 variantes) -> 5. OCR (Tesseract | EasyOCR)
-       -> 6. pós-processamento (padrão LLLNLNN) -> 7. votação entre variantes -> texto final
+imagem -> detecção da placa -> retificação -> ROI dos caracteres -> pré-processamento (7 variantes)
+       -> OCR (Tesseract | EasyOCR) -> pós-processamento (LLLNLNN) -> votação -> texto final
 ```
 
-1. **Segmentação** (`src/segmentation.py`): limiarização HSV da faixa azul da placa, morfologia
-   (fechamento/abertura), busca de contornos e *score* de verificação (proporção da faixa, bandeira
-   verde/amarela, corpo claro com texto escuro, tamanho). Elimina falsos positivos como carroceria
-   azul e a placa pequena do estepe (imagem 2).
-2. **Extração**: `minAreaRect` + transformação de perspectiva endireitam a placa. A moldura
-   tracejada inferior é localizada para que o recorte **não inclua a placa original do carro**
-   que aparece embaixo (imagens 5, 7 e 20).
-3. **ROI**: somente os caracteres (sem faixa azul, moldura nem o rótulo "BR").
-4. **Pré-processamento** (`src/preprocessing.py`): `gray`, `clahe`, `otsu`, `adaptive`,
-   `bgnorm_otsu`, `bgnorm_median`, `bgnorm_close` (normalização de fundo por *closing* morfológico,
-   filtro de mediana, fechamento da hachura da marca d'água).
-5. **OCR** (`src/ocr_engines.py`): interface idêntica para os dois motores.
-6. **Pós-processamento** (`src/postprocess.py`): limpeza, escolha da melhor subsequência de 7
-   caracteres e correção letra↔dígito por posição conforme o padrão Mercosul `LLLNLNN`.
-7. **Votação** por posição entre as variantes, ponderada pela confiança do OCR.
+| Etapa | Arquivo | O que faz |
+|---|---|---|
+| Detecção | `src/segmentation.py` | Limiarização HSV da faixa azul da placa, morfologia (close/open), `findContours`. Cada contorno recebe um score (proporção, bandeira verde/amarela, corpo claro, tamanho) e o melhor é escolhido. |
+| Extração | `src/segmentation.py` | `minAreaRect` + `warpPerspective` endireitam a placa. A moldura tracejada inferior é achada por perfil de linhas escuras, assim o recorte não inclui a placa original do carro que aparece por baixo (imagens 5, 7 e 20). |
+| ROI | `src/segmentation.py` | Recorta só os caracteres (remove faixa azul, moldura e o "BR"). |
+| Pré-processamento | `src/preprocessing.py` | 7 variantes (abaixo). |
+| OCR | `src/ocr_engines.py` | Mesma interface para os dois motores: `recognize(img) -> (texto, confiança)`. |
+| Pós-processamento | `src/postprocess.py` | Limpa o texto, escolhe a melhor subsequência de 7 caracteres e corrige letra/dígito por posição (padrão Mercosul `LLLNLNN`). |
+| Votação | `src/postprocess.py` | Voto por posição entre as variantes, peso = 0,1 + confiança do OCR. |
 
-## Estrutura
+**Variantes de pré-processamento:** `gray`, `clahe`, `otsu`, `adaptive`, `bgnorm_otsu`,
+`bgnorm_median`, `bgnorm_close`. A normalização de fundo (`bgnorm_*`) divide a imagem pelo fundo
+estimado com *closing* morfológico, o que remove o degradê de iluminação. A mediana e o *closing*
+suavizam a hachura da marca d'água dentro dos caracteres.
+
+**Configuração do Tesseract:** `--oem 3 --psm 7`, whitelist `A-Z0-9`, dicionários desligados
+(`load_system_dawg=0`, `load_freq_dawg=0`), altura do texto normalizada em 48 px.
+
+## Estrutura do repositório
 
 ```
-imagens/                 20 imagens originais + (gabarito.csv na raiz)
-placas_segmentadas/      deteccao/, placas_extraidas/, rois_caracteres/  (evidências da segmentação)
+imagens/              20 imagens de entrada
+src/                  segmentation, preprocessing, ocr_engines, postprocess, pipeline
+gabarito.csv          placas reais (transcrição manual), usado só na avaliação
+main.py               roda os dois pipelines + comparação
+run_tesseract.py      pipeline completo com Tesseract
+run_easyocr.py        pipeline completo com EasyOCR
+compare_results.py    métricas contra o gabarito
+requirements.txt
+```
+
+Gerado ao executar:
+
+```
+placas_segmentadas/   deteccao/, placas_extraidas/, rois_caracteres/
 resultados/
-  tesseract/resultados_tesseract.txt          <- texto final por imagem (Tesseract)
-  tesseract/resultados_tesseract_detalhado.txt   saída bruta de cada variante
-  easyocr/resultados_easyocr.txt              <- gerado por run_easyocr.py
-  comparacao.md / comparacao_variantes.png    tabelas e gráfico (compare_results.py)
-src/                     segmentation, preprocessing, ocr_engines, postprocess, pipeline
-main.py                  roda os dois pipelines + comparação
-run_tesseract.py         pipeline completo com Tesseract
-run_easyocr.py           pipeline completo com EasyOCR
-compare_results.py       métricas contra o gabarito
+  tesseract/resultados_tesseract.txt   texto final por imagem
+  easyocr/resultados_easyocr.txt       texto final por imagem
+  */resultados_*_detalhado.txt         saída bruta de cada variante
+  comparacao.md, comparacao_variantes.png
 ```
 
-## Instalação e execução
+## Como executar
+
+Requisitos: Python 3.10+ e o [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) instalado.
+No Windows, `C:\Program Files\Tesseract-OCR\tesseract.exe` é detectado automaticamente; em outro
+caminho, defina `TESSERACT_CMD`.
 
 ```bash
+python -m venv venv
+venv\Scripts\activate          # Linux/Mac: source venv/bin/activate
 pip install -r requirements.txt
+
+python main.py                 # os dois pipelines + comparação
 ```
-É necessário instalar o **Tesseract OCR** no computador (no Windows, o caminho padrão
-`C:\Program Files\Tesseract-OCR\tesseract.exe` é detectado automaticamente; caso contrário defina a
-variável de ambiente `TESSERACT_CMD`). O EasyOCR baixa seus modelos na primeira execução.
+
+Ou separadamente:
 
 ```bash
-python main.py            # os dois pipelines + comparação
-python run_tesseract.py   # só Tesseract
-python run_easyocr.py     # só EasyOCR
-python compare_results.py # (re)gera resultados/comparacao.md
+python run_tesseract.py        # só Tesseract  (~20 s)
+python run_easyocr.py          # só EasyOCR    (baixa os modelos na 1ª vez)
+python compare_results.py      # gera resultados/comparacao.md
 ```
+
+A segmentação é refeita a cada execução, a partir das imagens originais.
 
 ## Resultados
 
-Gabarito (`gabarito.csv`): transcrição manual das 20 placas.
-Segmentação: **20/20 placas localizadas e extraídas corretamente**.
+Gabarito (`gabarito.csv`) transcrito manualmente. A segmentação localizou e extraiu **20/20 placas**.
+Tabelas completas em `resultados/comparacao.md`.
 
-| Motor | Acerto exato | Acurácia por caractere | CER |
+### Pipeline final (7 variantes + votação + formato Mercosul)
+
+| Motor | Placas exatas | Acurácia por caractere | CER | Tempo (20 imagens, CPU) |
+|---|---|---|---|---|
+| Tesseract | 18/20 (90%) | 98,6% | 1,4% | 43,1 s |
+| EasyOCR | 16/20 (80%) | 97,1% | 2,9% | 64,1 s |
+
+Erros do pipeline final:
+
+| Imagem | Gabarito | Tesseract | EasyOCR |
 |---|---|---|---|
-| Tesseract | 17/20 (85%) | 97,9% | 2,1% |
-| EasyOCR | _rodar `python run_easyocr.py` e preencher_ | | |
+| 3 | IYZ2Z18 | LYZ2Z18 | ok |
+| 7 | GXQ2J95 | GXQ2I95 | GXO2J95 |
+| 13 | ABP8Q89 | ok | ABP8O89 |
+| 15 | THY7E19 | ok | THY2E19 |
+| 20 | TGG1D44 | ok | TGG1O44 |
 
-Observações sobre o Tesseract (detalhes em `resultados/comparacao.md`):
+### Efeito do pré-processamento (placas exatas por variante, sem votação, após formato LLLNLNN)
 
-* O pré-processamento pesa muito: sem formato, a melhor variante acerta 9/20; as variantes com
-  normalização de fundo + votação + padrão Mercosul chegam a 17/20. `gray` e `clahe` foram as piores.
-* O Tesseract lê o **zero com barra** da fonte da placa como "G". Em posição numérica, "G" é
-  convertido em "0".
-* Erros restantes: `IYZ2Z18`→`LYZ2Z18`, `GXQ2J95`→`GXQ2I95`, `MNL3U98`→`MNL5U98`.
+| Variante | Tesseract | EasyOCR |
+|---|---|---|
+| gray | 7/20 | 8/20 |
+| clahe | 4/20 | 9/20 |
+| otsu | 12/20 | 11/20 |
+| adaptive | 13/20 | 14/20 |
+| bgnorm_otsu | 16/20 | 15/20 |
+| bgnorm_median | 17/20 | 10/20 |
+| bgnorm_close | 16/20 | 14/20 |
+
+### Efeito do pós-processamento (mesmas saídas brutas)
+
+| Motor | Só texto limpo | Formato, tabela genérica (G→6) | Formato, ajustado à fonte (G→0) |
+|---|---|---|---|
+| Tesseract | 10/20 | 14/20 | 18/20 |
+| EasyOCR | 7/20 | 16/20 | 16/20 |
+
+## Análise
+
+- **Resultado geral:** o Tesseract acertou 18/20 e o EasyOCR 16/20. A diferença é de 2 placas em 20,
+  pequena demais para concluir superioridade.
+- **Tipo de erro:** o Tesseract errou `I`→`L` e `J`→`I` (letras de traço simples). O EasyOCR errou
+  `Q`→`O` (2x), `D`→`O` e `7`→`2`, ou seja, confunde letras de contorno arredondado e um dígito.
+  Como o `O` é letra, o formato LLLNLNN não corrige esses casos.
+- **Sensibilidade ao pré-processamento:** o Tesseract depende bastante dele: vai de 4/20 (`clahe`) a
+  17/20 (`bgnorm_median`). O EasyOCR é mais estável em imagens em tons de cinza (`clahe` 9/20 contra
+  4/20 no Tesseract), mas piora com a mediana (10/20), que suaviza demais os traços. Para os dois, as
+  variantes com normalização de fundo foram as melhores, o que confirma que o problema principal do
+  dataset é a iluminação desigual.
+- **Votação:** o resultado final superou a melhor variante isolada nos dois motores
+  (Tesseract 18 contra 17; EasyOCR 16 contra 15).
+- **Pós-processamento pelo formato:** foi o maior ganho para ambos (Tesseract 10→14/20 e EasyOCR
+  7→16/20 só com a tabela genérica), pois corrige trocas letra/dígito por posição.
+- **Zero com barra:** o Tesseract lê esse zero como `G`. O ajuste `G`→`0` levou o Tesseract de
+  14/20 para 18/20 e não alterou o EasyOCR (16/20). **Com a tabela genérica, o EasyOCR (16/20)
+  supera o Tesseract (14/20).** O ranking final depende, portanto, desse ajuste.
+- **Tempo:** o EasyOCR levou cerca de 49% a mais (64,1 s contra 43,1 s) em CPU.
 
 ## Limitações
 
-* A conversão `G→0` foi definida **depois de observar os erros nestas mesmas 20 imagens**; com a
-  tabela genérica (`G→6`) o Tesseract acerta 13/20. `compare_results.py` mostra as duas versões.
-* O gabarito foi transcrito manualmente; confira-o.
-* A segmentação usa a faixa azul/bandeira da placa Mercosul; placas antigas (cinza) exigiriam outro detector.
+- A conversão `G`→`0` foi definida **depois de observar os erros nestas 20 imagens** e favorece o
+  Tesseract (ver análise acima). O `compare_results.py` reporta as duas versões.
+- Os parâmetros da segmentação (faixas de cor, margens da ROI) foram calibrados neste dataset.
+  O detector depende da faixa azul e da bandeira, portanto não serve para placas cinza antigas.
+- O gabarito é manual e pode conter erros de transcrição.
+- Dataset de 20 imagens: diferenças de 1 ou 2 placas não são estatisticamente significativas.
+- "Formato válido 20/20" no `comparacao.md` só indica que o texto segue LLLNLNN (o pós-processamento
+  força isso), não que a placa está correta.
