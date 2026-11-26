@@ -1,0 +1,5 @@
+opencv-python
+numpy
+pytesseract
+easyocr>=1.7
+matplotlib

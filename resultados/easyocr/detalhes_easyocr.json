@@ -1,0 +1,826 @@
+{
+  "engine": "EasyOCR",
+  "tempo_s": 64.06,
+  "resultados": {
+    "1.JPG": {
+      "final": "IFA1T95",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "DTT95",
+          "conf": 0.0625,
+          "formatted": "DTT9S"
+        },
+        "clahe": {
+          "raw": "IFA1T95",
+          "conf": 0.6849,
+          "formatted": "IFA1T95"
+        },
+        "otsu": {
+          "raw": "IA",
+          "conf": 0.8139,
+          "formatted": "IA"
+        },
+        "adaptive": {
+          "raw": "IFA1T95",
+          "conf": 0.682,
+          "formatted": "IFA1T95"
+        },
+        "bgnorm_otsu": {
+          "raw": "IFA1T95",
+          "conf": 0.844,
+          "formatted": "IFA1T95"
+        },
+        "bgnorm_median": {
+          "raw": "IFA1T9S",
+          "conf": 0.4236,
+          "formatted": "IFA1T95"
+        },
+        "bgnorm_close": {
+          "raw": "IFA1T95",
+          "conf": 0.8087,
+          "formatted": "IFA1T95"
+        }
+      }
+    },
+    "2.JPG": {
+      "final": "NEV1C08",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "NEVIC08",
+          "conf": 0.602,
+          "formatted": "NEV1C08"
+        },
+        "clahe": {
+          "raw": "NEV1C08",
+          "conf": 0.5371,
+          "formatted": "NEV1C08"
+        },
+        "otsu": {
+          "raw": "NEV1C08",
+          "conf": 0.618,
+          "formatted": "NEV1C08"
+        },
+        "adaptive": {
+          "raw": "NEVICO8",
+          "conf": 0.5811,
+          "formatted": "NEV1C08"
+        },
+        "bgnorm_otsu": {
+          "raw": "NEVICO8",
+          "conf": 0.4016,
+          "formatted": "NEV1C08"
+        },
+        "bgnorm_median": {
+          "raw": "NEVCO8",
+          "conf": 0.9517,
+          "formatted": "NEVCO8"
+        },
+        "bgnorm_close": {
+          "raw": "NEV1C08",
+          "conf": 0.5416,
+          "formatted": "NEV1C08"
+        }
+      }
+    },
+    "3.JPG": {
+      "final": "IYZ2Z18",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "IZ2Z18",
+          "conf": 0.6506,
+          "formatted": "IZZ2I8"
+        },
+        "clahe": {
+          "raw": "IYZ2Z18",
+          "conf": 0.6691,
+          "formatted": "IYZ2Z18"
+        },
+        "otsu": {
+          "raw": "IYZ2Z18",
+          "conf": 0.3091,
+          "formatted": "IYZ2Z18"
+        },
+        "adaptive": {
+          "raw": "IYZ2Z18",
+          "conf": 0.8432,
+          "formatted": "IYZ2Z18"
+        },
+        "bgnorm_otsu": {
+          "raw": "IVZ2Z18",
+          "conf": 0.3906,
+          "formatted": "IVZ2Z18"
+        },
+        "bgnorm_median": {
+          "raw": "IYZ2218",
+          "conf": 0.4642,
+          "formatted": "IYZ2Z18"
+        },
+        "bgnorm_close": {
+          "raw": "IYZ2Z18",
+          "conf": 0.7202,
+          "formatted": "IYZ2Z18"
+        }
+      }
+    },
+    "4.JPG": {
+      "final": "QOW9N47",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "DLLA4Z",
+          "conf": 0.1838,
+          "formatted": "DLL4A2"
+        },
+        "clahe": {
+          "raw": "QOWON47",
+          "conf": 0.5318,
+          "formatted": "QOW0N47"
+        },
+        "otsu": {
+          "raw": "QO59N67",
+          "conf": 0.33,
+          "formatted": "QOS9N67"
+        },
+        "adaptive": {
+          "raw": "QOHQN47",
+          "conf": 0.1629,
+          "formatted": "QOH0N47"
+        },
+        "bgnorm_otsu": {
+          "raw": "QOW9N47",
+          "conf": 0.2121,
+          "formatted": "QOW9N47"
+        },
+        "bgnorm_median": {
+          "raw": "QOW9N67",
+          "conf": 0.4738,
+          "formatted": "QOW9N67"
+        },
+        "bgnorm_close": {
+          "raw": "QO59N47",
+          "conf": 0.4784,
+          "formatted": "QOS9N47"
+        }
+      }
+    },
+    "5.JPG": {
+      "final": "USQ0T32",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "USQ0T32",
+          "conf": 0.8194,
+          "formatted": "USQ0T32"
+        },
+        "clahe": {
+          "raw": "USQ0T32",
+          "conf": 0.3327,
+          "formatted": "USQ0T32"
+        },
+        "otsu": {
+          "raw": "USQ0T32",
+          "conf": 0.6595,
+          "formatted": "USQ0T32"
+        },
+        "adaptive": {
+          "raw": "USQ0T32",
+          "conf": 0.4034,
+          "formatted": "USQ0T32"
+        },
+        "bgnorm_otsu": {
+          "raw": "USQOT32",
+          "conf": 0.6722,
+          "formatted": "USQ0T32"
+        },
+        "bgnorm_median": {
+          "raw": "USQOT32",
+          "conf": 0.9531,
+          "formatted": "USQ0T32"
+        },
+        "bgnorm_close": {
+          "raw": "USQOT32",
+          "conf": 0.9265,
+          "formatted": "USQ0T32"
+        }
+      }
+    },
+    "6.JPG": {
+      "final": "TYL3X75",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "TML3XZ5",
+          "conf": 0.3873,
+          "formatted": "TML3X25"
+        },
+        "clahe": {
+          "raw": "TL3X75",
+          "conf": 0.5216,
+          "formatted": "TLBXT5"
+        },
+        "otsu": {
+          "raw": "35",
+          "conf": 0.0678,
+          "formatted": "BS"
+        },
+        "adaptive": {
+          "raw": "TVL3X75",
+          "conf": 0.8528,
+          "formatted": "TVL3X75"
+        },
+        "bgnorm_otsu": {
+          "raw": "TYL3X75",
+          "conf": 0.5739,
+          "formatted": "TYL3X75"
+        },
+        "bgnorm_median": {
+          "raw": "TVL3X75",
+          "conf": 0.5049,
+          "formatted": "TVL3X75"
+        },
+        "bgnorm_close": {
+          "raw": "TYL3X75",
+          "conf": 0.9339,
+          "formatted": "TYL3X75"
+        }
+      }
+    },
+    "7.JPG": {
+      "final": "GXO2J95",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "GX02J95",
+          "conf": 0.8997,
+          "formatted": "GXO2J95"
+        },
+        "clahe": {
+          "raw": "GX02J95",
+          "conf": 0.9468,
+          "formatted": "GXO2J95"
+        },
+        "otsu": {
+          "raw": "GX02J95",
+          "conf": 0.6765,
+          "formatted": "GXO2J95"
+        },
+        "adaptive": {
+          "raw": "GXQ2J95",
+          "conf": 0.5863,
+          "formatted": "GXQ2J95"
+        },
+        "bgnorm_otsu": {
+          "raw": "GX02J95",
+          "conf": 0.8154,
+          "formatted": "GXO2J95"
+        },
+        "bgnorm_median": {
+          "raw": "GX02J95",
+          "conf": 0.6984,
+          "formatted": "GXO2J95"
+        },
+        "bgnorm_close": {
+          "raw": "GX02J95",
+          "conf": 0.8771,
+          "formatted": "GXO2J95"
+        }
+      }
+    },
+    "8.JPG": {
+      "final": "XHY6U29",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "XHY6U29",
+          "conf": 0.668,
+          "formatted": "XHY6U29"
+        },
+        "clahe": {
+          "raw": "XHY6U29",
+          "conf": 0.8567,
+          "formatted": "XHY6U29"
+        },
+        "otsu": {
+          "raw": "XHY64296",
+          "conf": 0.5654,
+          "formatted": "XHY6A29"
+        },
+        "adaptive": {
+          "raw": "XHY6U29",
+          "conf": 0.9946,
+          "formatted": "XHY6U29"
+        },
+        "bgnorm_otsu": {
+          "raw": "XHV6U29",
+          "conf": 0.8754,
+          "formatted": "XHV6U29"
+        },
+        "bgnorm_median": {
+          "raw": "XHV6429",
+          "conf": 0.7539,
+          "formatted": "XHV6A29"
+        },
+        "bgnorm_close": {
+          "raw": "XHV6U29",
+          "conf": 0.477,
+          "formatted": "XHV6U29"
+        }
+      }
+    },
+    "9.JPG": {
+      "final": "AOA4J16",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "A0A4J16",
+          "conf": 0.8826,
+          "formatted": "AOA4J16"
+        },
+        "clahe": {
+          "raw": "A0A4J16",
+          "conf": 0.7211,
+          "formatted": "AOA4J16"
+        },
+        "otsu": {
+          "raw": "A0A4J16",
+          "conf": 0.6984,
+          "formatted": "AOA4J16"
+        },
+        "adaptive": {
+          "raw": "A0A4J16",
+          "conf": 0.5413,
+          "formatted": "AOA4J16"
+        },
+        "bgnorm_otsu": {
+          "raw": "A0A4J16",
+          "conf": 0.7302,
+          "formatted": "AOA4J16"
+        },
+        "bgnorm_median": {
+          "raw": "A046J16",
+          "conf": 0.9134,
+          "formatted": "AOA6J16"
+        },
+        "bgnorm_close": {
+          "raw": "A0A4J16",
+          "conf": 0.7495,
+          "formatted": "AOA4J16"
+        }
+      }
+    },
+    "10.JPG": {
+      "final": "PDU7G22",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "PD7G22",
+          "conf": 0.473,
+          "formatted": "PDT0Z2"
+        },
+        "clahe": {
+          "raw": "P1WG",
+          "conf": 0.5924,
+          "formatted": "PIW0"
+        },
+        "otsu": {
+          "raw": "PDU7G22",
+          "conf": 0.6068,
+          "formatted": "PDU7G22"
+        },
+        "adaptive": {
+          "raw": "PDU7G22",
+          "conf": 0.7138,
+          "formatted": "PDU7G22"
+        },
+        "bgnorm_otsu": {
+          "raw": "PDU7G22",
+          "conf": 0.8197,
+          "formatted": "PDU7G22"
+        },
+        "bgnorm_median": {
+          "raw": "PDU7G22",
+          "conf": 0.8825,
+          "formatted": "PDU7G22"
+        },
+        "bgnorm_close": {
+          "raw": "PDU7G22",
+          "conf": 0.9471,
+          "formatted": "PDU7G22"
+        }
+      }
+    },
+    "11.JPG": {
+      "final": "MNL3U98",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "MNL328",
+          "conf": 0.2477,
+          "formatted": "MNL3Z8"
+        },
+        "clahe": {
+          "raw": "MNL3U98",
+          "conf": 0.8211,
+          "formatted": "MNL3U98"
+        },
+        "otsu": {
+          "raw": "MNL3U98",
+          "conf": 0.7869,
+          "formatted": "MNL3U98"
+        },
+        "adaptive": {
+          "raw": "MNL3U98",
+          "conf": 0.8716,
+          "formatted": "MNL3U98"
+        },
+        "bgnorm_otsu": {
+          "raw": "MNL3U98",
+          "conf": 0.8513,
+          "formatted": "MNL3U98"
+        },
+        "bgnorm_median": {
+          "raw": "MNL3U98",
+          "conf": 0.9145,
+          "formatted": "MNL3U98"
+        },
+        "bgnorm_close": {
+          "raw": "HNL3U98",
+          "conf": 0.6959,
+          "formatted": "HNL3U98"
+        }
+      }
+    },
+    "12.JPG": {
+      "final": "JET7G88",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "JET7G88",
+          "conf": 0.9767,
+          "formatted": "JET7G88"
+        },
+        "clahe": {
+          "raw": "JET7G88",
+          "conf": 0.9965,
+          "formatted": "JET7G88"
+        },
+        "otsu": {
+          "raw": "JET7G88",
+          "conf": 0.9708,
+          "formatted": "JET7G88"
+        },
+        "adaptive": {
+          "raw": "JET7G88",
+          "conf": 0.8422,
+          "formatted": "JET7G88"
+        },
+        "bgnorm_otsu": {
+          "raw": "JET7G88",
+          "conf": 0.8097,
+          "formatted": "JET7G88"
+        },
+        "bgnorm_median": {
+          "raw": "JET7G88",
+          "conf": 0.9596,
+          "formatted": "JET7G88"
+        },
+        "bgnorm_close": {
+          "raw": "JET7G88",
+          "conf": 0.9321,
+          "formatted": "JET7G88"
+        }
+      }
+    },
+    "13.JPG": {
+      "final": "ABP8O89",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "AB8082",
+          "conf": 0.8247,
+          "formatted": "ABB0B2"
+        },
+        "clahe": {
+          "raw": "ABP8089",
+          "conf": 0.9875,
+          "formatted": "ABP8O89"
+        },
+        "otsu": {
+          "raw": "ABP8089",
+          "conf": 0.9903,
+          "formatted": "ABP8O89"
+        },
+        "adaptive": {
+          "raw": "ABP8089",
+          "conf": 0.9336,
+          "formatted": "ABP8O89"
+        },
+        "bgnorm_otsu": {
+          "raw": "ABP8089",
+          "conf": 0.8702,
+          "formatted": "ABP8O89"
+        },
+        "bgnorm_median": {
+          "raw": "ABP8089",
+          "conf": 0.9816,
+          "formatted": "ABP8O89"
+        },
+        "bgnorm_close": {
+          "raw": "ABP8Q89",
+          "conf": 0.6686,
+          "formatted": "ABP8Q89"
+        }
+      }
+    },
+    "14.JPG": {
+      "final": "PHI8H00",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "PHI8HOO",
+          "conf": 0.8914,
+          "formatted": "PHI8H00"
+        },
+        "clahe": {
+          "raw": "PHI8HOO",
+          "conf": 0.8506,
+          "formatted": "PHI8H00"
+        },
+        "otsu": {
+          "raw": "PHI8HOO",
+          "conf": 0.7208,
+          "formatted": "PHI8H00"
+        },
+        "adaptive": {
+          "raw": "PHI8HOO",
+          "conf": 0.4797,
+          "formatted": "PHI8H00"
+        },
+        "bgnorm_otsu": {
+          "raw": "PHI8HOO",
+          "conf": 0.7208,
+          "formatted": "PHI8H00"
+        },
+        "bgnorm_median": {
+          "raw": "PHI8HOO",
+          "conf": 0.9384,
+          "formatted": "PHI8H00"
+        },
+        "bgnorm_close": {
+          "raw": "PHI8HOO",
+          "conf": 0.8987,
+          "formatted": "PHI8H00"
+        }
+      }
+    },
+    "15.JPG": {
+      "final": "THY2E19",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "THYZE19",
+          "conf": 0.9471,
+          "formatted": "THY2E19"
+        },
+        "clahe": {
+          "raw": "THYZE19",
+          "conf": 0.8398,
+          "formatted": "THY2E19"
+        },
+        "otsu": {
+          "raw": "THYZE19",
+          "conf": 0.52,
+          "formatted": "THY2E19"
+        },
+        "adaptive": {
+          "raw": "THYZE19",
+          "conf": 0.9472,
+          "formatted": "THY2E19"
+        },
+        "bgnorm_otsu": {
+          "raw": "THY7E19",
+          "conf": 0.5514,
+          "formatted": "THY7E19"
+        },
+        "bgnorm_median": {
+          "raw": "THYZE19",
+          "conf": 0.599,
+          "formatted": "THY2E19"
+        },
+        "bgnorm_close": {
+          "raw": "THYZE19",
+          "conf": 0.7495,
+          "formatted": "THY2E19"
+        }
+      }
+    },
+    "16.JPG": {
+      "final": "UHK5O55",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "WK5O55",
+          "conf": 0.4943,
+          "formatted": "WKS0S5"
+        },
+        "clahe": {
+          "raw": "WHK5055",
+          "conf": 0.7926,
+          "formatted": "WHK5O55"
+        },
+        "otsu": {
+          "raw": "UHK5055",
+          "conf": 0.9695,
+          "formatted": "UHK5O55"
+        },
+        "adaptive": {
+          "raw": "UHK5055",
+          "conf": 0.6545,
+          "formatted": "UHK5O55"
+        },
+        "bgnorm_otsu": {
+          "raw": "UHK5055",
+          "conf": 0.9637,
+          "formatted": "UHK5O55"
+        },
+        "bgnorm_median": {
+          "raw": "UHK5055",
+          "conf": 0.9863,
+          "formatted": "UHK5O55"
+        },
+        "bgnorm_close": {
+          "raw": "UHK5055",
+          "conf": 0.989,
+          "formatted": "UHK5O55"
+        }
+      }
+    },
+    "17.JPG": {
+      "final": "NZQ3M77",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "NZQ3M77",
+          "conf": 0.3331,
+          "formatted": "NZQ3M77"
+        },
+        "clahe": {
+          "raw": "NZO377",
+          "conf": 0.1113,
+          "formatted": "NZO3T7"
+        },
+        "otsu": {
+          "raw": "NZQ3M77",
+          "conf": 0.7407,
+          "formatted": "NZQ3M77"
+        },
+        "adaptive": {
+          "raw": "NZQ3MZ7",
+          "conf": 0.9447,
+          "formatted": "NZQ3M27"
+        },
+        "bgnorm_otsu": {
+          "raw": "NZQ3M77",
+          "conf": 0.7351,
+          "formatted": "NZQ3M77"
+        },
+        "bgnorm_median": {
+          "raw": "NZQ3M77",
+          "conf": 0.896,
+          "formatted": "NZQ3M77"
+        },
+        "bgnorm_close": {
+          "raw": "NZQ3M77",
+          "conf": 0.7925,
+          "formatted": "NZQ3M77"
+        }
+      }
+    },
+    "18.JPG": {
+      "final": "XDA5E50",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "XDASESO",
+          "conf": 0.657,
+          "formatted": "XDA5E50"
+        },
+        "clahe": {
+          "raw": "XDASESI",
+          "conf": 0.4449,
+          "formatted": "XDA5E51"
+        },
+        "otsu": {
+          "raw": "XDASESOO",
+          "conf": 0.8802,
+          "formatted": "DAS3S00"
+        },
+        "adaptive": {
+          "raw": "XDASESO",
+          "conf": 0.9208,
+          "formatted": "XDA5E50"
+        },
+        "bgnorm_otsu": {
+          "raw": "XDASESO",
+          "conf": 0.8285,
+          "formatted": "XDA5E50"
+        },
+        "bgnorm_median": {
+          "raw": "XDASESO",
+          "conf": 0.8587,
+          "formatted": "XDA5E50"
+        },
+        "bgnorm_close": {
+          "raw": "XDASESO",
+          "conf": 0.8192,
+          "formatted": "XDA5E50"
+        }
+      }
+    },
+    "19.JPG": {
+      "final": "ESI4I93",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "ESIIG",
+          "conf": 0.0942,
+          "formatted": "ESI1G"
+        },
+        "clahe": {
+          "raw": "EST42",
+          "conf": 0.2244,
+          "formatted": "EST4Z"
+        },
+        "otsu": {
+          "raw": "ESI4193",
+          "conf": 0.7709,
+          "formatted": "ESI4I93"
+        },
+        "adaptive": {
+          "raw": "ESI4193",
+          "conf": 0.9514,
+          "formatted": "ESI4I93"
+        },
+        "bgnorm_otsu": {
+          "raw": "ESI4193",
+          "conf": 0.66,
+          "formatted": "ESI4I93"
+        },
+        "bgnorm_median": {
+          "raw": "ESI6193",
+          "conf": 0.917,
+          "formatted": "ESI6I93"
+        },
+        "bgnorm_close": {
+          "raw": "ESI4193",
+          "conf": 0.6196,
+          "formatted": "ESI4I93"
+        }
+      }
+    },
+    "20.JPG": {
+      "final": "TGG1O44",
+      "valid": true,
+      "variants": {
+        "gray": {
+          "raw": "TGGZZ",
+          "conf": 0.1449,
+          "formatted": "TGG2Z"
+        },
+        "clahe": {
+          "raw": "TLEEI44",
+          "conf": 0.0448,
+          "formatted": "TLE3I44"
+        },
+        "otsu": {
+          "raw": "T661044",
+          "conf": 0.2133,
+          "formatted": "TGG1O44"
+        },
+        "adaptive": {
+          "raw": "T66I044",
+          "conf": 0.3956,
+          "formatted": "TGG1O44"
+        },
+        "bgnorm_otsu": {
+          "raw": "T661044",
+          "conf": 0.3985,
+          "formatted": "TGG1O44"
+        },
+        "bgnorm_median": {
+          "raw": "TGG1066",
+          "conf": 0.3203,
+          "formatted": "TGG1O66"
+        },
+        "bgnorm_close": {
+          "raw": "T661044",
+          "conf": 0.2423,
+          "formatted": "TGG1O44"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+# Saída detalhada - EasyOCR (tempo total: 64.1s)
+
+== 1.JPG  ->  FINAL: IFA1T95
+   gray            bruto='DTT95'        conf=0.06  formatado=DTT9S
+   clahe           bruto='IFA1T95'      conf=0.68  formatado=IFA1T95
+   otsu            bruto='IA'           conf=0.81  formatado=IA
+   adaptive        bruto='IFA1T95'      conf=0.68  formatado=IFA1T95
+   bgnorm_otsu     bruto='IFA1T95'      conf=0.84  formatado=IFA1T95
+   bgnorm_median   bruto='IFA1T9S'      conf=0.42  formatado=IFA1T95
+   bgnorm_close    bruto='IFA1T95'      conf=0.81  formatado=IFA1T95
+
+== 2.JPG  ->  FINAL: NEV1C08
+   gray            bruto='NEVIC08'      conf=0.60  formatado=NEV1C08
+   clahe           bruto='NEV1C08'      conf=0.54  formatado=NEV1C08
+   otsu            bruto='NEV1C08'      conf=0.62  formatado=NEV1C08
+   adaptive        bruto='NEVICO8'      conf=0.58  formatado=NEV1C08
+   bgnorm_otsu     bruto='NEVICO8'      conf=0.40  formatado=NEV1C08
+   bgnorm_median   bruto='NEVCO8'       conf=0.95  formatado=NEVCO8
+   bgnorm_close    bruto='NEV1C08'      conf=0.54  formatado=NEV1C08
+
+== 3.JPG  ->  FINAL: IYZ2Z18
+   gray            bruto='IZ2Z18'       conf=0.65  formatado=IZZ2I8
+   clahe           bruto='IYZ2Z18'      conf=0.67  formatado=IYZ2Z18
+   otsu            bruto='IYZ2Z18'      conf=0.31  formatado=IYZ2Z18
+   adaptive        bruto='IYZ2Z18'      conf=0.84  formatado=IYZ2Z18
+   bgnorm_otsu     bruto='IVZ2Z18'      conf=0.39  formatado=IVZ2Z18
+   bgnorm_median   bruto='IYZ2218'      conf=0.46  formatado=IYZ2Z18
+   bgnorm_close    bruto='IYZ2Z18'      conf=0.72  formatado=IYZ2Z18
+
+== 4.JPG  ->  FINAL: QOW9N47
+   gray            bruto='DLLA4Z'       conf=0.18  formatado=DLL4A2
+   clahe           bruto='QOWON47'      conf=0.53  formatado=QOW0N47
+   otsu            bruto='QO59N67'      conf=0.33  formatado=QOS9N67
+   adaptive        bruto='QOHQN47'      conf=0.16  formatado=QOH0N47
+   bgnorm_otsu     bruto='QOW9N47'      conf=0.21  formatado=QOW9N47
+   bgnorm_median   bruto='QOW9N67'      conf=0.47  formatado=QOW9N67
+   bgnorm_close    bruto='QO59N47'      conf=0.48  formatado=QOS9N47
+
+== 5.JPG  ->  FINAL: USQ0T32
+   gray            bruto='USQ0T32'      conf=0.82  formatado=USQ0T32
+   clahe           bruto='USQ0T32'      conf=0.33  formatado=USQ0T32
+   otsu            bruto='USQ0T32'      conf=0.66  formatado=USQ0T32
+   adaptive        bruto='USQ0T32'      conf=0.40  formatado=USQ0T32
+   bgnorm_otsu     bruto='USQOT32'      conf=0.67  formatado=USQ0T32
+   bgnorm_median   bruto='USQOT32'      conf=0.95  formatado=USQ0T32
+   bgnorm_close    bruto='USQOT32'      conf=0.93  formatado=USQ0T32
+
+== 6.JPG  ->  FINAL: TYL3X75
+   gray            bruto='TML3XZ5'      conf=0.39  formatado=TML3X25
+   clahe           bruto='TL3X75'       conf=0.52  formatado=TLBXT5
+   otsu            bruto='35'           conf=0.07  formatado=BS
+   adaptive        bruto='TVL3X75'      conf=0.85  formatado=TVL3X75
+   bgnorm_otsu     bruto='TYL3X75'      conf=0.57  formatado=TYL3X75
+   bgnorm_median   bruto='TVL3X75'      conf=0.50  formatado=TVL3X75
+   bgnorm_close    bruto='TYL3X75'      conf=0.93  formatado=TYL3X75
+
+== 7.JPG  ->  FINAL: GXO2J95
+   gray            bruto='GX02J95'      conf=0.90  formatado=GXO2J95
+   clahe           bruto='GX02J95'      conf=0.95  formatado=GXO2J95
+   otsu            bruto='GX02J95'      conf=0.68  formatado=GXO2J95
+   adaptive        bruto='GXQ2J95'      conf=0.59  formatado=GXQ2J95
+   bgnorm_otsu     bruto='GX02J95'      conf=0.82  formatado=GXO2J95
+   bgnorm_median   bruto='GX02J95'      conf=0.70  formatado=GXO2J95
+   bgnorm_close    bruto='GX02J95'      conf=0.88  formatado=GXO2J95
+
+== 8.JPG  ->  FINAL: XHY6U29
+   gray            bruto='XHY6U29'      conf=0.67  formatado=XHY6U29
+   clahe           bruto='XHY6U29'      conf=0.86  formatado=XHY6U29
+   otsu            bruto='XHY64296'     conf=0.57  formatado=XHY6A29
+   adaptive        bruto='XHY6U29'      conf=0.99  formatado=XHY6U29
+   bgnorm_otsu     bruto='XHV6U29'      conf=0.88  formatado=XHV6U29
+   bgnorm_median   bruto='XHV6429'      conf=0.75  formatado=XHV6A29
+   bgnorm_close    bruto='XHV6U29'      conf=0.48  formatado=XHV6U29
+
+== 9.JPG  ->  FINAL: AOA4J16
+   gray            bruto='A0A4J16'      conf=0.88  formatado=AOA4J16
+   clahe           bruto='A0A4J16'      conf=0.72  formatado=AOA4J16
+   otsu            bruto='A0A4J16'      conf=0.70  formatado=AOA4J16
+   adaptive        bruto='A0A4J16'      conf=0.54  formatado=AOA4J16
+   bgnorm_otsu     bruto='A0A4J16'      conf=0.73  formatado=AOA4J16
+   bgnorm_median   bruto='A046J16'      conf=0.91  formatado=AOA6J16
+   bgnorm_close    bruto='A0A4J16'      conf=0.75  formatado=AOA4J16
+
+== 10.JPG  ->  FINAL: PDU7G22
+   gray            bruto='PD7G22'       conf=0.47  formatado=PDT0Z2
+   clahe           bruto='P1WG'         conf=0.59  formatado=PIW0
+   otsu            bruto='PDU7G22'      conf=0.61  formatado=PDU7G22
+   adaptive        bruto='PDU7G22'      conf=0.71  formatado=PDU7G22
+   bgnorm_otsu     bruto='PDU7G22'      conf=0.82  formatado=PDU7G22
+   bgnorm_median   bruto='PDU7G22'      conf=0.88  formatado=PDU7G22
+   bgnorm_close    bruto='PDU7G22'      conf=0.95  formatado=PDU7G22
+
+== 11.JPG  ->  FINAL: MNL3U98
+   gray            bruto='MNL328'       conf=0.25  formatado=MNL3Z8
+   clahe           bruto='MNL3U98'      conf=0.82  formatado=MNL3U98
+   otsu            bruto='MNL3U98'      conf=0.79  formatado=MNL3U98
+   adaptive        bruto='MNL3U98'      conf=0.87  formatado=MNL3U98
+   bgnorm_otsu     bruto='MNL3U98'      conf=0.85  formatado=MNL3U98
+   bgnorm_median   bruto='MNL3U98'      conf=0.91  formatado=MNL3U98
+   bgnorm_close    bruto='HNL3U98'      conf=0.70  formatado=HNL3U98
+
+== 12.JPG  ->  FINAL: JET7G88
+   gray            bruto='JET7G88'      conf=0.98  formatado=JET7G88
+   clahe           bruto='JET7G88'      conf=1.00  formatado=JET7G88
+   otsu            bruto='JET7G88'      conf=0.97  formatado=JET7G88
+   adaptive        bruto='JET7G88'      conf=0.84  formatado=JET7G88
+   bgnorm_otsu     bruto='JET7G88'      conf=0.81  formatado=JET7G88
+   bgnorm_median   bruto='JET7G88'      conf=0.96  formatado=JET7G88
+   bgnorm_close    bruto='JET7G88'      conf=0.93  formatado=JET7G88
+
+== 13.JPG  ->  FINAL: ABP8O89
+   gray            bruto='AB8082'       conf=0.82  formatado=ABB0B2
+   clahe           bruto='ABP8089'      conf=0.99  formatado=ABP8O89
+   otsu            bruto='ABP8089'      conf=0.99  formatado=ABP8O89
+   adaptive        bruto='ABP8089'      conf=0.93  formatado=ABP8O89
+   bgnorm_otsu     bruto='ABP8089'      conf=0.87  formatado=ABP8O89
+   bgnorm_median   bruto='ABP8089'      conf=0.98  formatado=ABP8O89
+   bgnorm_close    bruto='ABP8Q89'      conf=0.67  formatado=ABP8Q89
+
+== 14.JPG  ->  FINAL: PHI8H00
+   gray            bruto='PHI8HOO'      conf=0.89  formatado=PHI8H00
+   clahe           bruto='PHI8HOO'      conf=0.85  formatado=PHI8H00
+   otsu            bruto='PHI8HOO'      conf=0.72  formatado=PHI8H00
+   adaptive        bruto='PHI8HOO'      conf=0.48  formatado=PHI8H00
+   bgnorm_otsu     bruto='PHI8HOO'      conf=0.72  formatado=PHI8H00
+   bgnorm_median   bruto='PHI8HOO'      conf=0.94  formatado=PHI8H00
+   bgnorm_close    bruto='PHI8HOO'      conf=0.90  formatado=PHI8H00
+
+== 15.JPG  ->  FINAL: THY2E19
+   gray            bruto='THYZE19'      conf=0.95  formatado=THY2E19
+   clahe           bruto='THYZE19'      conf=0.84  formatado=THY2E19
+   otsu            bruto='THYZE19'      conf=0.52  formatado=THY2E19
+   adaptive        bruto='THYZE19'      conf=0.95  formatado=THY2E19
+   bgnorm_otsu     bruto='THY7E19'      conf=0.55  formatado=THY7E19
+   bgnorm_median   bruto='THYZE19'      conf=0.60  formatado=THY2E19
+   bgnorm_close    bruto='THYZE19'      conf=0.75  formatado=THY2E19
+
+== 16.JPG  ->  FINAL: UHK5O55
+   gray            bruto='WK5O55'       conf=0.49  formatado=WKS0S5
+   clahe           bruto='WHK5055'      conf=0.79  formatado=WHK5O55
+   otsu            bruto='UHK5055'      conf=0.97  formatado=UHK5O55
+   adaptive        bruto='UHK5055'      conf=0.65  formatado=UHK5O55
+   bgnorm_otsu     bruto='UHK5055'      conf=0.96  formatado=UHK5O55
+   bgnorm_median   bruto='UHK5055'      conf=0.99  formatado=UHK5O55
+   bgnorm_close    bruto='UHK5055'      conf=0.99  formatado=UHK5O55
+
+== 17.JPG  ->  FINAL: NZQ3M77
+   gray            bruto='NZQ3M77'      conf=0.33  formatado=NZQ3M77
+   clahe           bruto='NZO377'       conf=0.11  formatado=NZO3T7
+   otsu            bruto='NZQ3M77'      conf=0.74  formatado=NZQ3M77
+   adaptive        bruto='NZQ3MZ7'      conf=0.94  formatado=NZQ3M27
+   bgnorm_otsu     bruto='NZQ3M77'      conf=0.74  formatado=NZQ3M77
+   bgnorm_median   bruto='NZQ3M77'      conf=0.90  formatado=NZQ3M77
+   bgnorm_close    bruto='NZQ3M77'      conf=0.79  formatado=NZQ3M77
+
+== 18.JPG  ->  FINAL: XDA5E50
+   gray            bruto='XDASESO'      conf=0.66  formatado=XDA5E50
+   clahe           bruto='XDASESI'      conf=0.44  formatado=XDA5E51
+   otsu            bruto='XDASESOO'     conf=0.88  formatado=DAS3S00
+   adaptive        bruto='XDASESO'      conf=0.92  formatado=XDA5E50
+   bgnorm_otsu     bruto='XDASESO'      conf=0.83  formatado=XDA5E50
+   bgnorm_median   bruto='XDASESO'      conf=0.86  formatado=XDA5E50
+   bgnorm_close    bruto='XDASESO'      conf=0.82  formatado=XDA5E50
+
+== 19.JPG  ->  FINAL: ESI4I93
+   gray            bruto='ESIIG'        conf=0.09  formatado=ESI1G
+   clahe           bruto='EST42'        conf=0.22  formatado=EST4Z
+   otsu            bruto='ESI4193'      conf=0.77  formatado=ESI4I93
+   adaptive        bruto='ESI4193'      conf=0.95  formatado=ESI4I93
+   bgnorm_otsu     bruto='ESI4193'      conf=0.66  formatado=ESI4I93
+   bgnorm_median   bruto='ESI6193'      conf=0.92  formatado=ESI6I93
+   bgnorm_close    bruto='ESI4193'      conf=0.62  formatado=ESI4I93
+
+== 20.JPG  ->  FINAL: TGG1O44
+   gray            bruto='TGGZZ'        conf=0.14  formatado=TGG2Z
+   clahe           bruto='TLEEI44'      conf=0.04  formatado=TLE3I44
+   otsu            bruto='T661044'      conf=0.21  formatado=TGG1O44
+   adaptive        bruto='T66I044'      conf=0.40  formatado=TGG1O44
+   bgnorm_otsu     bruto='T661044'      conf=0.40  formatado=TGG1O44
+   bgnorm_median   bruto='TGG1066'      conf=0.32  formatado=TGG1O66
+   bgnorm_close    bruto='T661044'      conf=0.24  formatado=TGG1O44
